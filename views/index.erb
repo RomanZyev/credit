@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Sinatra app</title>
+  </head>
+  <body>
+
+<td id="bar-center"><h1>Кредитный онлайн-калькулятор</h1><script language="JavaScript" type="text/javascript">
+         function sendcalc(){
+            if(!document.form.percent.value || !document.form.credit.value || !document.form.term.value){
+               alert('Вы ввели не все данные!');
+               return false;
+            }
+         }
+      </script>
+      <to-copy xmlns=""><p>
+Предлагаем вам рассчитать ориентировочную сумму ежемесячных платежей по&nbsp;возврату основной суммы и&nbsp;процентов за&nbsp;пользование кредитом в&nbsp;зависимости от&nbsp;срока кредитования и&nbsp;размера процентной ставки, а&nbsp;также определить наиболее удобную для вас схему кредитования.</p>
+<p>Более подробную информацию можно получить при личной встрече с&nbsp;кредитным экспертом.</p>
+
+<form action="/result/" method="post" onsubmit="return sendcalc()" target="graphic" name="form">
+
+<table class="form" width="100%" cellpadding="5" cellspacing="0">
+  <tbody><tr>
+    <td width="35%"><b>Кредитные сведения:</b></td>
+    <td width="65%">&nbsp;</td>
+  </tr>
+  <tr>
+    <td><label for="percent">Процентная ставка (%):</label></td>
+    <td><input type="text" name="percent" id="percent" value="" style="" size="3"><br><p><font color="red">Внимание: Данные вводятся через точку!</font></p></td>
+  </tr>
+  <tr>
+    <td><label for="credit">Сумма кредита:</label></td>
+    <td><input type="text" name="credit" id="credit" value="" style="" size="10"></td>
+  </tr>
+  <tr>
+    <td><label>Метод погашения кредита:</label></td>
+    <td>
+      <input type="radio" name="payOff" id="payOffUsual" value="Usual" checked="">
+      <label for="payOffUsual">Стандартный</label><br>
+      <input type="radio" name="payOff" id="payOffEqual" value="Equal">
+      <label for="payOffEqual">Аннуитентный (равными частями)</label>
+    </td>
+  </tr>
+  <tr>
+    <td><label for="term">Срок кредита (в месяцах):</label></td>
+    <td><input type="text" name="term" id="term" value="" style="" size="5"><br></td>
+  </tr>
+  <tr>
+    <td><b>График платежей:</b></td>
+    <td>
+      <input type="submit" name="doGraph" value="Построить" id="doGraph">
+      <br><br>
+    </td>
+  </tr>
+</tbody></table>
+</form></to-copy></td>
+
+ </body>
+</html>
